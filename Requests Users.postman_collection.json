@@ -1,0 +1,404 @@
+{
+	"info": {
+		"_postman_id": "b15657b4-3757-434d-b4d5-89f4a46f0c4b",
+		"name": "Requests Users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fb0e50ca-047e-4f43-b1a6-8b6fc1128257",
+						"exec": [
+							"",
+							"pm.test(\"Content-Type is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"    pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json')",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "8e414881-4fb0-4094-9061-4f041c181331",
+						"exec": [
+							"try{",
+							"    pm.environment.set('user_name', \"alex123\");",
+							"}",
+							"catch(e){",
+							"    console.log(e);",
+							"    throw false;",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 34895,\n    \"username\": \"{{user_name}}\",\n    \"firstName\": \"Alex\",\n    \"lastName\": \"Storm\",\n    \"email\": \"a.storm@gmail.com\",\n    \"password\": \"12309\",\n    \"phone\": \"0660579265\",\n    \"userStatus\": 0\n}"
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "11c6d2f8-4988-4747-ad4e-40c88526990b",
+						"exec": [
+							"let jsonData = pm.response.json();",
+							"",
+							"pm.test(\"All fields from request are equal to all fields from response\", function () {",
+							"    pm.expect(jsonData.id).to.eql(34895);",
+							"    pm.expect(jsonData.firstName).to.eql(\"Alex\");",
+							"    pm.expect(jsonData.email).to.eql(\"a.storm@gmail.com\");",
+							"    pm.expect(jsonData.password).to.eql(\"12309\");",
+							"    pm.expect(jsonData.userStatus).to.eql(0);",
+							"    ",
+							"});",
+							"",
+							"pm.test(\"user_name from env is equal to username from response\", function () {",
+							"    pm.expect(pm.environment.get(\"user_name\")).to.eql(\"alex123\");",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/{{user_name}}",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"{{user_name}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/alex123",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"alex123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create users",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "aadaa9b8-6e24-496b-8beb-b31699c4aa23",
+						"exec": [
+							"try{",
+							"    pm.environment.set('update_user_name', \"olivq9\");",
+							"}",
+							"catch(e){",
+							"    console.log(e);",
+							"    throw false;",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "9ad232fa-e859-4413-a0b5-b1f350cb5c6e",
+						"exec": [
+							"",
+							"pm.test(\"Content-Type is present and Content-Type is application/json\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"    pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json')",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"id\": 24946,\n        \"username\": \"jos321\",\n        \"firstName\": \"Joseph\",\n        \"lastName\": \"Davies\",\n        \"email\": \"j.davies@gmail.com\",\n        \"password\": \"56231\",\n        \"phone\": \"277801276\",\n        \"userStatus\": 1\n    },\n    {\n        \"id\": 24947,\n        \"username\": \"{{update_user_name}}\",\n        \"firstName\": \"Olivia\",\n        \"lastName\": \"Smith\",\n        \"email\": \"o.smith@gmail.com\",\n        \"password\": \"028gh\",\n        \"phone\": \"32478239\",\n        \"userStatus\": 0\n    },\n    {\n        \"id\": 24948,\n        \"username\": \"georg5678\",\n        \"firstName\": \"Gerorge\",\n        \"lastName\": \"Wilson\",\n        \"email\": \"g.wilson@gmail.com\",\n        \"password\": \"02fc\",\n        \"phone\": \"3456745\",\n        \"userStatus\": 1\n    }\n]"
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/createWithList",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"createWithList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 24947,\n    \"username\": \"olivq9\",\n    \"firstName\": \"Olivia\",\n    \"lastName\": \"King\",\n    \"email\": \"o.smith@gmail.com\",\n    \"password\": \"232323\",\n    \"phone\": \"0660433782\",\n    \"userStatus\": 0\n}"
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/olivq9",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"olivq9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get updated user",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7cfbc0a3-4c15-486b-a983-19fb6b29b523",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/{{update_user_name}}",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"{{update_user_name}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user jos321",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/jos321",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"jos321"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user olivq9",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/olivq9",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"olivq9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user georg5678",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/georg5678",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"georg5678"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "28d63dfc-2a34-4b6e-9578-8e27a34c652b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "c2eeda31-feb8-4912-83e3-e5ed843731b2",
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Status code is 200\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});"
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
