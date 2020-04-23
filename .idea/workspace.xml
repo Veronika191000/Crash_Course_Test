@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b44474cd-b5bb-4480-a9c7-d312aa68f6c3" name="Default Changelist" comment="" />
+    <list default="true" id="50d78d27-ad58-47bd-bce9-bd7f6eb30731" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -14,7 +24,10 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectId" id="1ZLcxglYOHmfcSPaovqwzY7YZxL" />
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1awhtoaBzLjKlSv4V7tYplSHfjE" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -22,25 +35,140 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/SoftServeTasks/ProjectsMaven/TestGoogleSoftServe" />
+  </component>
+  <component name="RunManager" selected="TestNG.io.swagger.users">
+    <configuration name="APITestsChangeUser.testCodeResponsePutRequest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ApiTestTask" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.swagger.users.secondcollection.APITestsChangeUser" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.swagger.users.secondcollection" />
+      <option name="MAIN_CLASS_NAME" value="io.swagger.users.secondcollection.APITestsChangeUser" />
+      <option name="METHOD_NAME" value="testCodeResponsePutRequest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="APITestsGetUser.testAllFieldsOfResponseGetRequest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ApiTestTask" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.swagger.users.secondcollection.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.swagger.users.secondcollection" />
+      <option name="MAIN_CLASS_NAME" value="io.swagger.users.secondcollection.APITestsGetUser" />
+      <option name="METHOD_NAME" value="testAllFieldsOfResponseGetRequest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="APITestsRemoveAllUsers" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ApiTestTask" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.swagger.users.secondcollection.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.swagger.users.secondcollection" />
+      <option name="MAIN_CLASS_NAME" value="io.swagger.users.secondcollection.APITestsRemoveAllUsers" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="io.swagger.users" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ApiTestTask" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.swagger.users.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.swagger.users" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="io.swagger.users.secondcollection" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ApiTestTask" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.swagger.users.secondcollection.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.swagger.users.secondcollection" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.io.swagger.users" />
+        <item itemvalue="TestNG.io.swagger.users.secondcollection" />
+        <item itemvalue="TestNG.APITestsRemoveAllUsers" />
+        <item itemvalue="TestNG.APITestsGetUser.testAllFieldsOfResponseGetRequest" />
+        <item itemvalue="TestNG.APITestsChangeUser.testCodeResponsePutRequest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b44474cd-b5bb-4480-a9c7-d312aa68f6c3" name="Default Changelist" comment="" />
-      <created>1584622062886</created>
+      <changelist id="50d78d27-ad58-47bd-bce9-bd7f6eb30731" name="Default Changelist" comment="" />
+      <created>1587652780153</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1584622062886</updated>
+      <updated>1587652780153</updated>
     </task>
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1584622092861">
+    <state x="566" y="271" width="403" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587653965299">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1584622092861" />
+    <state x="566" y="271" width="403" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1587653965299" />
+    <state x="280" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1587655159318">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="280" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1587655159318" />
+    <state width="1493" height="19" key="GridCell.Tab.0.bottom" timestamp="1587655771204">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="19" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587655771204" />
+    <state width="1493" height="19" key="GridCell.Tab.0.center" timestamp="1587655771204">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="19" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587655771204" />
+    <state width="1493" height="19" key="GridCell.Tab.0.left" timestamp="1587655771204">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="19" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587655771204" />
+    <state width="1493" height="19" key="GridCell.Tab.0.right" timestamp="1587655771204">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="19" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587655771204" />
   </component>
 </project>
