@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Test" verbose="3">
+
+    <test name="Testscope1">
+        <classes>
+            <class name="pages.MainPage"></class>
+        </classes>
+    </test>
+    <test name="Testscope2">
+        <classes>
+            <class name="pages.SearchResultPage"></class>
+        </classes>
+    </test>
+    <test name="Testscope3">
+        <classes>
+            <class name="pages.VinePage"></class>
+        </classes>
+    </test>
+    <test name="Testscope4">
+        <groups>
+            <run>
+                <exclude name="ClassTestVine"></exclude>
+            </run>
+        </groups>
+    </test>
+</suite>
